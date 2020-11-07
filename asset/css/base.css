@@ -1,0 +1,49 @@
+/* Đặt biến dùng chung, màu chữ, màu chủ đề... */
+:root {
+    --text-color: #222;
+    --primary-color: #27ae60;
+}
+
+/* Font chữ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+.active {
+    color: var(--primary-color);
+}
+
+/* 12 columns */
+.grid {
+    max-width: 98%;
+    margin: 0 auto;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 18.75%;
+    margin: 0 0.5rem;
+}
