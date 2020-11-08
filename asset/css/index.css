@@ -93,11 +93,6 @@
         width: 31.5%;
         margin: 0 0.4rem 0.7rem;
     }
-
-    .item:last-child {
-        display: none;
-    }
-
 }
 
 @media screen and (max-width: 860px) {
