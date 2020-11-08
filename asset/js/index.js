@@ -19,10 +19,24 @@ for(item of arrBestSellers){
     nameElement.innerText = item.name;
     itemElement.appendChild(nameElement);
 
+    let btnWrap = document.createElement('section');
+    btnWrap.classList.add('item-btn-wrap');
+
     let priceElement = document.createElement('span');
     priceElement.classList.add('item-price');
     priceElement.innerText = item.price + 'đ';
-    itemElement.appendChild(priceElement);
+    btnWrap.appendChild(priceElement);
+
+    let btnAdd = document.createElement('button');
+    btnAdd.classList.add('btn', 'btn-add-cart');
+    let iconAdd = document.createElement('i');
+    iconAdd.classList.add('fas', 'fa-cart-plus');
+    btnAdd.appendChild(iconAdd);
+    var t = document.createTextNode('Thêm vào giỏ');
+    btnAdd.appendChild(t);
+    btnWrap.appendChild(btnAdd);
+
+    itemElement.appendChild(btnWrap);
 }
 
 // Cần load lại array khác cho content-product này
@@ -44,10 +58,24 @@ for(item of arrFeatureProduct){
     nameElement.innerText = item.name;
     itemElement.appendChild(nameElement);
 
+    let btnWrap = document.createElement('section');
+    btnWrap.classList.add('item-btn-wrap');
+
     let priceElement = document.createElement('span');
     priceElement.classList.add('item-price');
     priceElement.innerText = item.price + 'đ';
-    itemElement.appendChild(priceElement);
+    btnWrap.appendChild(priceElement);
+
+    let btnAdd = document.createElement('button');
+    btnAdd.classList.add('btn', 'btn-add-cart');
+    let iconAdd = document.createElement('i');
+    iconAdd.classList.add('fas', 'fa-cart-plus');
+    btnAdd.appendChild(iconAdd);
+    var t = document.createTextNode('Thêm vào giỏ');
+    btnAdd.appendChild(t);
+    btnWrap.appendChild(btnAdd);
+    
+    itemElement.appendChild(btnWrap);
 }
 
 
