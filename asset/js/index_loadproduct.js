@@ -6,6 +6,7 @@ let bestSellersElement = document.querySelector('.best-sellers');
 
 for(item of arrBestSellers){
     let itemElement = document.createElement('section');
+    itemElement.setAttribute('item_id', item.id);
     itemElement.classList.add('item')
     bestSellersElement.appendChild(itemElement);
 
@@ -27,8 +28,12 @@ for(item of arrBestSellers){
     priceElement.innerText = item.price + 'đ';
     btnWrap.appendChild(priceElement);
 
+    // onclick
     let btnAdd = document.createElement('button');
     btnAdd.classList.add('btn', 'btn-add-cart');
+
+    btnAdd.onclick = addToCart;
+
     let iconAdd = document.createElement('i');
     iconAdd.classList.add('fas', 'fa-cart-plus');
     btnAdd.appendChild(iconAdd);
@@ -39,7 +44,23 @@ for(item of arrBestSellers){
     itemElement.appendChild(btnWrap);
 }
 
-// Cần load lại array khác cho content-product này
+let userLogin = sessionStorage.getItem('UserLogin');
+
+if(userLogin) {
+    btnDangnhap.style.display = 'none';
+}
+
+
+function addToCart() {
+    if(userLogin){
+        // lấy item id
+        console.log(this.parentNode.parentNode.getAttribute('item_id'));
+
+    } else {
+        //mở trang đăng nhập/đăng ký
+    }
+}
+
 let arrFeatureProduct = JSON.parse(localStorage.getItem('FeatureProduct'))
 let productElement = document.querySelector('.content-product');
 
