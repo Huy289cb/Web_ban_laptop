@@ -14,7 +14,7 @@ btnLogin.onclick = function() {
       for(User of arrUser){
          if(User.username === usernameL.value.trim() && User.password === passwordL.value.trim()){
             fl = false;
-            localStorage.setItem('currentUser', JSON.stringify(User));
+            sessionStorage.setItem('currentUser', JSON.stringify(User));
             alert('Đăng nhập thành công');
             window.open('index.html', "_self");
             //mở trang chủ
