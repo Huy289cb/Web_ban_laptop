@@ -87,47 +87,7 @@
     margin-left: 10px;
 }
 
-@media screen and (max-width: 1200px) {
-    .item {
-        width: 31.5%;
-        margin: 0 0.4rem 0.7rem;
-    }
-}
-
-@media screen and (max-width: 860px) {
-
-    .best-sellers {
-        flex-wrap: wrap;
-        margin: 2.5em auto 0;
-        width: 100%;
-    }
-
-    .best-sellers .item:first-child {
-        width: 100%;
-        text-align: center;
-        padding: 0 2rem;
-        margin: 0 auto 1.5rem auto;
-    }
-
-    .best-sellers .item:first-child h2 {
-        font-size: 21px;
-        padding-bottom: 10px;
-        letter-spacing: 2px;
-    }
-
-    .best-sellers .item:first-child p {
-        padding-top: 0.6rem;
-    }
-
-    .item {
-        width: 46%;
-        margin: 0 0.4rem 0.7rem;
-    }
-
-}
-
 /* Thanh policy */
-
 .policy {
     display: flex;
     width: 100%;
@@ -163,30 +123,7 @@
     font-weight: 600;
 }
 
-@media screen and (max-width: 860px) {
-    .policy {
-        margin-top: 2.5em;
-        flex-wrap: wrap;
-        min-height: 300px;
-    }
-
-    .policy-label {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        padding: 25px;
-        border-bottom: 1px solid #fff;
-    }
-
-    .policy-label small {
-        margin-top: 0.3rem;
-    }
-}
-
 /* Featured products */
-
 .feature-product .heading {
     margin: 50px auto;
     text-align: center;
@@ -216,7 +153,6 @@
 
 
 /* Newsletter subscrible */
-
 .newsletter {
     margin-top: 60px;
     text-align: center;
@@ -260,4 +196,80 @@
 
 .newsletter-subs-btn:hover {
     background-color: #11ca6b;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    .item {
+        width: 31.5%;
+        margin: 0 0.4rem 0.7rem;
+    }
+}
+
+@media screen and (max-width: 860px) {
+
+    .best-sellers {
+        flex-wrap: wrap;
+        margin: 2.5em auto 0;
+        width: 100%;
+    }
+
+    .best-sellers .item:first-child {
+        width: 100%;
+        text-align: center;
+        padding: 0 2rem;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .best-sellers .item:first-child h2 {
+        font-size: 21px;
+        padding-bottom: 10px;
+        letter-spacing: 2px;
+    }
+
+    .best-sellers .item:first-child p {
+        padding-top: 0.6rem;
+    }
+
+    .item {
+        width: 48%;
+        margin: 0 1% 12px;
+    }
+
+    .policy {
+        margin-top: 2.5em;
+        flex-wrap: wrap;
+        min-height: 300px;
+    }
+
+    .policy-label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        padding: 25px;
+        border-bottom: 1px solid #fff;
+    }
+
+    .policy-label small {
+        margin-top: 0.3rem;
+    }
+}
+
+
+@media screen and (max-width: 568px){
+    .item {
+        width: 98%;
+    }
+    
+    .policy-label {
+        width: 100%;
+        border-right: none;
+    }
+
+    .policy{
+        height: fit-content;
+        justify-content: center;
+    }
 }

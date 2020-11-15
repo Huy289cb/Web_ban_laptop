@@ -25,7 +25,7 @@ for(item of arrBestSellers){
 
     let priceElement = document.createElement('span');
     priceElement.classList.add('item-price');
-    priceElement.innerText = item.price + 'đ';
+    priceElement.innerText = Number(item.price).toLocaleString() + 'đ';
     btnWrap.appendChild(priceElement);
 
     // onclick
@@ -44,20 +44,20 @@ for(item of arrBestSellers){
     itemElement.appendChild(btnWrap);
 }
 
-let userLogin = sessionStorage.getItem('UserLogin');
-
-if(userLogin) {
-    btnDangnhap.style.display = 'none';
-}
-
-
 function addToCart() {
-    if(userLogin){
-        // lấy item id
-        console.log(this.parentNode.parentNode.getAttribute('item_id'));
+    if(currentUser){
+        //mảng arrBestSellers
+        for(item of arrBestSellers){
+            if(item.id == this.parentNode.parentNode.getAttribute('item_id')){
+                 //thêm sản phẩm vào cart của current User
+                currentUser.cart.push(item)
+                cartNotice.innerText = currentUser.cart.length;
+            }
+        }
 
     } else {
         //mở trang đăng nhập/đăng ký
+        window.open('auth_form.html', "_self");
     }
 }
 
@@ -84,7 +84,7 @@ for(item of arrFeatureProduct){
 
     let priceElement = document.createElement('span');
     priceElement.classList.add('item-price');
-    priceElement.innerText = item.price + 'đ';
+    priceElement.innerText = Number(item.price).toLocaleString() + 'đ';
     btnWrap.appendChild(priceElement);
 
     let btnAdd = document.createElement('button');
