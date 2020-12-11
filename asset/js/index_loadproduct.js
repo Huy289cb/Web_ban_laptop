@@ -7,6 +7,7 @@ let bestSellersElement = document.querySelector('.best-sellers');
 for(item of arrBestSellers){
     let itemElement = document.createElement('section');
     itemElement.setAttribute('item_id', item.id);
+    itemElement.setAttribute('array', 'arrBestSellers');
     itemElement.classList.add('item')
     bestSellersElement.appendChild(itemElement);
 
@@ -28,7 +29,6 @@ for(item of arrBestSellers){
     priceElement.innerText = Number(item.price).toLocaleString() + 'đ';
     btnWrap.appendChild(priceElement);
 
-    // onclick
     let btnAdd = document.createElement('button');
     btnAdd.classList.add('btn', 'btn-add-cart');
 
@@ -42,6 +42,26 @@ for(item of arrBestSellers){
     btnWrap.appendChild(btnAdd);
 
     itemElement.appendChild(btnWrap);
+
+    //item onclick
+    itemElement.onclick = function() {
+        if(this.getAttribute('array') == 'arrBestSellers') {
+            for(item of arrBestSellers){
+                if(item.id == this.getAttribute('item_id')){
+                    var a = {
+                        id: item.id,
+                        img: item.img,
+                        name: item.name,
+                        brand: item.brand,
+                        price: item.price,
+                        desc: item.desc,
+                        warranty : item.warranty
+                    };
+                    console.log(a);
+                }
+            }
+        }
+    }
 }
 
 function addToCart() {
@@ -66,7 +86,9 @@ let productElement = document.querySelector('.content-product');
 
 for(item of arrFeatureProduct){
     let itemElement = document.createElement('section');
-    itemElement.classList.add('item')
+    itemElement.setAttribute('item_id', item.id);
+    itemElement.setAttribute('array', 'arrFeatureProduct');
+    itemElement.classList.add('item');
     productElement.appendChild(itemElement);
 
     let imgElement = document.createElement('section');
@@ -89,6 +111,7 @@ for(item of arrFeatureProduct){
 
     let btnAdd = document.createElement('button');
     btnAdd.classList.add('btn', 'btn-add-cart');
+    btnAdd.onclick = addToCart;
     let iconAdd = document.createElement('i');
     iconAdd.classList.add('fas', 'fa-cart-plus');
     btnAdd.appendChild(iconAdd);
@@ -97,6 +120,26 @@ for(item of arrFeatureProduct){
     btnWrap.appendChild(btnAdd);
     
     itemElement.appendChild(btnWrap);
+
+    //item onclick
+    itemElement.onclick = function() {
+        if(this.getAttribute('array') == 'arrFeatureProduct') {
+            for(item of arrFeatureProduct){
+                if(item.id == this.getAttribute('item_id')){
+                    var a = {
+                        id: item.id,
+                        img: item.img,
+                        name: item.name,
+                        brand: item.brand,
+                        price: item.price,
+                        desc: item.desc,
+                        warranty : item.warranty
+                    };
+                    console.log(a);
+                }
+            }
+        }
+    }
 }
 
 

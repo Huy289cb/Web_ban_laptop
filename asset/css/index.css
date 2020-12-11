@@ -1,6 +1,6 @@
 .best-sellers {
     display: flex;
-    margin: 60px auto 0;
+    margin: 40px auto 0;
     flex-wrap: wrap;
 }
 
