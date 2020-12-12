@@ -1,6 +1,6 @@
 // Load Best Seller items
 
-let arrBestSellers = JSON.parse(localStorage.getItem('BestSellers'))
+let arrBestSellers = JSON.parse(localStorage.getItem('BestSellers'));
 let bestSellersElement = document.querySelector('.best-sellers');
 
 
@@ -58,13 +58,16 @@ for(item of arrBestSellers){
                         warranty : item.warranty
                     };
                     console.log(a);
+                    localStorage.setItem('currentItem', JSON.stringify(a));
+                    window.open('sanpham.html', "_self");
                 }
             }
         }
     }
 }
 
-function addToCart() {
+function addToCart(e) {
+    e.stopPropagation()
     if(currentUser){
         //mảng arrBestSellers
         for(item of arrBestSellers){
@@ -136,6 +139,8 @@ for(item of arrFeatureProduct){
                         warranty : item.warranty
                     };
                     console.log(a);
+                    localStorage.setItem('currentItem', JSON.stringify(a));
+                    window.open('sanpham.html', "_self");
                 }
             }
         }
