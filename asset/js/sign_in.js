@@ -2,6 +2,7 @@ let btnf1 = document.getElementById('switch-btn1');
 let btnf2 = document.getElementById('switch-btn2');
 let login_form = document.getElementById('login-form');
 let reg_form = document.getElementById('reg-form');
+let btnLogout = document.getElementById('btnLogout');
 
 btnf1.onclick = function() {
    login_form.style.display = 'none';
@@ -17,6 +18,8 @@ btnLogin.onclick = function() {
             sessionStorage.setItem('currentUser', JSON.stringify(User));
             alert('Đăng nhập thành công');
             window.open('index.html', "_self");
+            btnLogout.style.display = 'block';
+
             //mở trang chủ
          }
       }

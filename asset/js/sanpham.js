@@ -61,4 +61,21 @@ btnbuy.classList.add('btn', 'btn-buy');
 btnbuy.innerText = 'Đặt mua ngay';
 btnwrap.appendChild(btnadd);
 btnwrap.appendChild(btnbuy);
+btnadd.onclick = addToCart;
 itemdesc.appendChild(btnwrap);
+
+let cartNotice = document.querySelector('.cart-notice');
+cartNotice.innerText = currentUser.cart.length;
+
+function addToCart() {
+    if(currentUser){
+        //thêm sản phẩm vào cart của current User
+        currentUser.cart.push(currentItem);
+        sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
+        cartNotice.innerText = currentUser.cart.length;
+    } else {
+        //mở trang đăng nhập/đăng ký
+        window.open('auth_form.html', "_self");
+    }
+}
+

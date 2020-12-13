@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base page</title>
+    <title>Hãng</title>
     <link rel="stylesheet" href="./asset/fonts/fontawesome-free-5.15.1-web/css/all.css">
     <link rel="stylesheet" href="./asset/css/base.css">
     <link rel="stylesheet" href="./asset/css/header-nav.css">
+    <link rel="stylesheet" href="./asset/css/dsSanpham.css">
 </head>
 <body>
     <section class="page">
@@ -21,8 +22,8 @@
                     <!-- Search bar -->
                     <section class="header__search">
                         <section class="search-wrap">
-                            <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm">
-                            <button class="search-btn">
+                            <input type="text" class="search-input"  id="searchProduct" placeholder="Tìm kiếm sản phẩm">
+                            <button class="search-btn" onclick="searchProduct()">
                                 <i class="search-btn-icon fas fa-search"></i>
                             </button>
                         </section>
@@ -31,9 +32,9 @@
                     <!-- Cart -->
                     <section class="header__cart">
                         <section class="cart-wrap">
-                            <a href="#" class="cart-link">
+                            <a href="auth_cart.html" class="cart-link">
                                 <i class="cart-icon fas fa-shopping-cart"></i>
-                                <small class="cart-notice">3</small>
+                                <small class="cart-notice">0</small>
                             </a>
                         </section>
                     </section>
@@ -47,19 +48,29 @@
             <input type="checkbox" name="" id="menu-checkbox">
             <ul class="navbar__menu">
                 <li class="menu-item">
-                    <a href="#" class="menu-item-link">Trang chủ</a>
+                    <a href="index.html" class="menu-item-link">Trang chủ</a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item item-drop menu-item-active">
                     <a href="#" class="menu-item-link">Sản phẩm</a>
+                    <ul class="menu-drop">
+                        <a href="hang.html" id="Dell">Dell</a>
+                        <a href="hang.html" id="Asus">Asus</a>
+                        <a href="hang.html" id="HP">HP</a>
+                        <a href="hang.html" id="MSI">MSI</a>
+                        <a href="hang.html" id="Lenovo">Lenovo</a>
+                    </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-item-link">Về chúng tôi</a>
+                    <a href="lienhe.html" class="menu-item-link">Liên hệ</a>
                 </li>
-                <li class="menu-item">
-                    <a href="#" class="menu-item-link">Liên hệ</a>
+                <li class="menu-item" id="btnProfile">
+                    <a href="#" class="menu-item-link">Giới thiệu</a>
                 </li>
-                <li class="menu-item">
-                    <a href="#" class="menu-item-link">Đăng nhập</a>
+                <li class="menu-item" id="btnDangnhap">
+                    <a href="auth_form.html" class="menu-item-link">Đăng nhập</a>
+                </li>
+                <li class="menu-item" id="btnLogout" onclick="logout()" style="display: none;">
+                    <a href="index.html" class="menu-item-link">Đăng xuất</a>
                 </li>
                 <label for="menu-checkbox" class="hide-menu-btn">
                     <i class="fas fa-times"></i>
@@ -68,11 +79,21 @@
         </nav>
 
         <section class="content">
-            <section class="grid">
-                <!-- CSS từ đây đi nhé -->
-                <section class="content-wrap">
-
+            <section class="feature-dsSanpham">
+                <section class="heading">
+                    <h1 class="brand-title">Dell</h1>
+                    <small>Thương hiệu phổ biến</small>
                 </section>
+                <section class="grid">
+                    <section class="content-dsSanpham">
+
+                    </section>
+                </section>
+            </section>
+            <section class="newsletter">
+                <p class="newsletter-title">ĐĂNG KÝ NHẬN EMAIL THÔNG BÁO KHUYẾN MẠI HOẶC ĐỂ ĐƯỢC TƯ VẤN MIỄN PHÍ</p>
+                <input type="text" name id="email_newsletter" placeholder="Nhập email hoặc số điện thoại của bạn">
+                <button class="newsletter-subs-btn">Đăng ký ngay</button>
             </section>
         </section>
 
@@ -87,5 +108,10 @@
             </section>
         </footer>
     </section>
+
+    <script src="./asset/js/index_currentuser.js"></script>
+    <script src="./asset/js/script_product.js"></script>
+    <script src="./asset/js/hang.js"></script>
+    <script src="./asset/js/index_control.js"></script>
 </body>
 </html>

@@ -121,6 +121,38 @@
     z-index: -1111;
 }
 
+/*menu con*/
+/*Ẩn các menu con cấp 1,2,3*/
+.item-drop {
+    position: relative;
+}
+
+.menu-drop{
+    display: none;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 1px 1px 8px #ccc;
+}
+.menu-item .menu-drop a{
+    color: black;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    border: 1px solid var(--primary-color);
+}
+
+.menu-drop a:hover {
+    background-color: var(--primary-color);
+}
+
+/*khi hover thì hiện menu con*/
+.item-drop:hover > .menu-drop{
+    display:  block;
+}
+
 
 /* Responsive */
 
@@ -159,11 +191,20 @@
     }
 
     .menu-item {
-        padding: 16px;
+        padding: 16px 0;
     }
 
     .menu-item a {
         color: #fafafa;
+    }
+
+    .menu-drop a {
+        color: black;
+    }
+
+    .menu-drop {
+        width: 50%;
+        right: 24%;
     }
 
     .hide-menu-btn {

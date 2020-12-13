@@ -3,7 +3,7 @@ let BestSeller = {
     arr: [],
     add: function(_img, _name, _brand, _price, _desc, _warranty ) {
         var a = {
-            id: this.arr.length + 1,
+            id: this.arr.length + 1 + 'b',
             img: _img,
             name: _name,
             brand: _brand,
@@ -131,7 +131,7 @@ let FeatureProduct = {
     arr: [],
     add: function(_img, _name, _brand, _price, _desc, _warranty ) {
         var a = {
-            id: this.arr.length + 1,
+            id: this.arr.length + 1 + 'f',
             img: _img,
             name: _name,
             brand: _brand,
@@ -295,7 +295,7 @@ Pin: 2 Cell Int (32Wh)`,
 
 FeatureProduct.add('./asset/img/56030_gl75__4_.png',
 `Laptop MSI Gaming GL75 Leopard 10SDR (495VN) (i7-10750H/16GBRAM/512GB SSD/GTX 1660Ti 6G/17.3 inch FHD 144Hz/Win 10/Đen) (2020)`,
-'MSI',
+'HP',
 `32489000`,
 `CPU: Intel Core i7-10750H
 RAM: 16GB DDR4 (2666Mhz) (8GB *2)
@@ -340,7 +340,7 @@ Pin: 6 cell 82Whr`,
 
 FeatureProduct.add('./asset/img/55891_lenovo_thinkpad_e14__7_.jpg',
 `Laptop Lenovo Thinkpad E14 (20RA007CVA) (i5 10210U/8GB RAM/512GB SSD/14 FHD/Dos/Đen)`,
-'Lenovo',
+'HP',
 `17299000`,
 `CPU: Intel Core i5-10210U (4C / 8T, 1.6 / 4.2GHz, 6MB)
 RAM: 8GB SO-DIMM DDR4-2666
@@ -370,7 +370,7 @@ Pin: 3Cell (42Whr)`,
 
 FeatureProduct.add('./asset/img/55811_legion5__4_.png',
 `Laptop Lenovo Legion 5-15ARH05 (82B500GTVN) (R7 4800H/8GB RAM/512GB SSD/15.6 FHD 144hz/GTX1650Ti 4G/Win/Đen`,
-'Lenovo',
+'HP',
 `26999000`,
 `CPU: Intel Core i5-1035G1 (1.0Ghz/6MB cache)
 RAM: 8GB DDR4 2666Mhz
@@ -415,7 +415,7 @@ Pin: 3-cell, 41 Wh Li-ion`,
 
 FeatureProduct.add('./asset/img/55498_morden_14_black__5_.png',
 `Laptop MSI Modern 14 B10RASW (202VN) (i7-10510U/8GB RAM/512GB SSD/MX330 2GB/ 14 inch FHD/Win 10/Đen) (2020)`,
-'MSI',
+'Dell',
 `23589000`,
 `CPU: Intel Core i7-10510U
 RAM: 8GB DDR4 (2666Mhz)
@@ -430,7 +430,7 @@ Pin: 4 cell, 50Wh`,
 
 FeatureProduct.add('./asset/img/55522_acernitro5__5_.jpg',
 `Laptop Acer Gaming Nitro 5 AN515-55-77P9 (NH.Q7NSV.003) (Core i7 10750H/8GB RAM/512GB SSD/GTX1650Ti 4G/15.6FHD IPS 144Hz/Win 10)`,
-'Acer',
+'Asus',
 `27999000`,
 `CPU: Intel Core i7 10750H (2.6Ghz/12MB cache)
 RAM: 8GB DDR4 2933Mhz

@@ -22,8 +22,8 @@
                     <!-- Search bar -->
                     <section class="header__search">
                         <section class="search-wrap">
-                            <input type="text" class="search-input" placeholder="Tìm kiếm...">
-                            <button class="search-btn">
+                            <input type="text" class="search-input"  id="searchProduct" placeholder="Tìm kiếm sản phẩm">
+                            <button class="search-btn" onclick="searchProduct()">
                                 <i class="search-btn-icon fas fa-search"></i>
                             </button>
                         </section>
@@ -32,7 +32,7 @@
                     <!-- Cart -->
                     <section class="header__cart">
                         <section class="cart-wrap">
-                            <a href="#" class="cart-link">
+                            <a href="auth_cart.html" class="cart-link">
                                 <i class="cart-icon fas fa-shopping-cart"></i>
                                 <small class="cart-notice">0</small>
                             </a>
@@ -48,22 +48,29 @@
             <input type="checkbox" name="" id="menu-checkbox">
             <ul class="navbar__menu">
                 <li class="menu-item menu-item-active">
-                    <a href="#" class="menu-item-link">Trang chủ</a>
+                    <a href="index.html" class="menu-item-link">Trang chủ</a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item item-drop">
                     <a href="#" class="menu-item-link">Sản phẩm</a>
+                    <ul class="menu-drop">
+                        <a href="hang.html" id="Dell">Dell</a>
+                        <a href="hang.html" id="Asus">Asus</a>
+                        <a href="hang.html" id="HP">HP</a>
+                        <a href="hang.html" id="MSI">MSI</a>
+                        <a href="hang.html" id="Lenovo">Lenovo</a>
+                    </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-item-link">Về chúng tôi</a>
+                    <a href="lienhe.html" class="menu-item-link">Liên hệ</a>
                 </li>
-                <li class="menu-item">
-                    <a href="#" class="menu-item-link">Liên hệ</a>
+                <li class="menu-item" id="btnProfile">
+                    <a href="#" class="menu-item-link">Giới thiệu</a>
                 </li>
                 <li class="menu-item" id="btnDangnhap">
                     <a href="auth_form.html" class="menu-item-link">Đăng nhập</a>
                 </li>
-                <li class="menu-item" id="btnProfile" style="display: none;">
-                    <a href="profile.html" class="menu-item-link">Trang cá nhân</a>
+                <li class="menu-item" id="btnLogout" onclick="logout()" style="display: none;">
+                    <a href="index.html" class="menu-item-link">Đăng xuất</a>
                 </li>
                 <label for="menu-checkbox" class="hide-menu-btn">
                     <i class="fas fa-times"></i>
