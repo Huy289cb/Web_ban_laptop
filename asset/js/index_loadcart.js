@@ -1,5 +1,4 @@
 
-let currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
 let cartNotice = document.querySelector('.cart-notice');
 
 if (currentUser) {
